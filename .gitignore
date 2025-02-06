@@ -1,7 +1,6 @@
 //this will affect all the git repos
 git config --global core.excludesfile ~/.gitignore
 
-
 //update files since .ignore won't if already tracked
 git rm --cached <file>
 
@@ -51,7 +50,7 @@ Thumbs.db
 nbproject
 
 # Numerous always-ignore extensions #
-#####################################
+#######################################
 *.diff
 *.err
 *.orig
@@ -85,6 +84,7 @@ bower_components
 
 # Folders to ignore #
 #####################
+/dist
 .hg
 .svn
 .CVS

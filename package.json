@@ -2,14 +2,20 @@
   "name": "audio-buffer",
   "version": "5.0.0",
   "description": "AudioBuffer class for node/browser",
-  "main": "index.js",
-  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/audiojs/audio-buffer"
+    "url": "https://github.com/booksby-dev/audio-buffer"
   },
   "scripts": {
-    "test": "node test"
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "tsc && node dist/test.js",
+    "benchmark": "tsc && node dist/benchmark.js"
   },
   "keywords": [
     "audio",
@@ -28,10 +34,12 @@
   "author": "Dmitry Iv <df.creative@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/audiojs/audio-buffer/issues"
+    "url": "https://github.com/booksby-dev/audio-buffer/issues"
   },
-  "homepage": "https://github.com/audiojs/audio-buffer",
+  "homepage": "https://github.com/booksby-dev/audio-buffer",
   "devDependencies": {
-    "tape": "^5.6.3"
+    "@types/node": "^20.11.17",
+    "tape": "^5.6.3",
+    "typescript": "^5.3.3"
   }
 }
